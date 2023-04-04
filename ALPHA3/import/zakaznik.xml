@@ -1,0 +1,20 @@
+<Zakaznik>
+    <item>
+        <jmeno>Mirek Novy</jmeno>
+        <adresa>123 Main St</adresa>
+        <telefon>555-555-5555</telefon>
+        <email>johnsmith@email.com</email>
+    </item>
+    <item>
+        <jmeno>Dan</jmeno>
+        <adresa>456 Park Ave</adresa>
+        <telefon>555-555-5556</telefon>
+        <email>janedoe@email.com</email>
+    </item>
+    <item>
+        <jmeno>Luke</jmeno>
+        <adresa>789 Elm St</adresa>
+        <telefon>555-555-5557</telefon>
+        <email>bobjohnson@email.com</email>
+    </item>
+</Zakaznik>

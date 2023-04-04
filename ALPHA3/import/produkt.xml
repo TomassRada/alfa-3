@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<produkty>
+    <produkt>
+        <jmeno>Kolo Mirek</jmeno>
+        <cena>3000.0</cena>
+        <vaha>5.5</vaha>
+        <velikost>S</velikost>
+        <typ>silnicni</typ>
+    </produkt>
+    <produkt>
+        <jmeno>Kolo Hello</jmeno>
+        <cena>1200.0</cena>
+        <vaha>5.0</vaha>
+        <velikost>S</velikost>
+        <typ>tereni</typ>
+    </produkt>
+    <produkt>
+        <jmeno>Kolo Belly</jmeno>
+        <cena>1800.0</cena>
+        <vaha>10.0</vaha>
+        <velikost>S</velikost>
+        <typ>detske</typ>
+    </produkt>
+</produkty>

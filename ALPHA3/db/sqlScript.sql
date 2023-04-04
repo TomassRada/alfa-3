@@ -1,0 +1,54 @@
+Tomáš Řáda 
+
+rada@spsejecna.cz  
+
+31.1.2023 
+
+SPŠE JEČNÁ  
+
+CREATE DATABASE obchod_s_koly;
+USE obchod_s_koly;
+
+CREATE TABLE Produkt (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+jmeno VARCHAR(255) NOT NULL,
+cena FLOAT NOT NULL,
+na_sklade INT NOT NULL,
+vaha FLOAT NOT NULL,
+velikost ENUM('S','M','L','XL') NOT NULL,
+typ ENUM('silniční','teréní','dětské') NOT NULL
+);
+
+
+CREATE TABLE Sklad (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+produkt_ID INT NOT NULL,
+pocet INT NOT NULL,
+FOREIGN KEY (produkt_ID) REFERENCES Produkt(ID)
+);
+
+CREATE TABLE Zakaznik (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+jmeno VARCHAR(255) NOT NULL,
+adresa VARCHAR(255) NOT NULL,
+telefon VARCHAR(255) NOT NULL,
+email VARCHAR(255) NOT NULL,
+datum_registrace DATETIME NOT NULL
+);
+
+CREATE TABLE Objednavka (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+zakaznik_ID INT NOT NULL,
+zamestnanec_ID INT NOT NULL,
+datum_objednavky DATETIME NOT NULL,
+cena_objednavky FLOAT NOT NULL,
+FOREIGN KEY (zakaznik_ID) REFERENCES Zakaznik(ID),
+FOREIGN KEY (zamestnanec_ID) REFERENCES Zamestnanec(ID)
+);
+
+CREATE TABLE Zamestnanec (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+jmeno VARCHAR(255) NOT NULL,
+addresa VARCHAR(255) NOT NULL,
+telefon VARCHAR(255) NOT NULL
+);
